@@ -1,0 +1,10 @@
+Task
+
+Go to gl.artoo.in/login
+Populate the username and password using jQuery. If you can do that, then you should be able to login programatically too!
+
+Answer:
+
+$("input[name=_username]").val("email@gmail.com");
+$("input[name=_password]").val("abcdefg");
+$('.btn.btn-primary').click();
