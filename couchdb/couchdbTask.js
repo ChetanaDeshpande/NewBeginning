@@ -52,6 +52,6 @@ for (var i=0; i<teams.length; i++){
 }
 
 result = {
-	"docs": JSON.stringify(teamArray)
+	"docs": teamArray
 }
 console.log(JSON.stringify(result));	
