@@ -1,16 +1,9 @@
 <!DOCTYPE html>
-<html style="
-    display: block;
-    border: rgb(204, 204, 213);
-    border-width: thick;
-    margin-left: 20px;
-    margin-right: 0px;
-    border-style: double;
-    margin-top: 50px;">
+<html>
     <head>
     	<title>MovieSavy</title>
     	</script>
-    	<link rel="stylesheet" href="style.css">
+    	<link rel="stylesheet" href="style/styles.css">
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script type="text/javascript" src="scripts/main.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -18,28 +11,15 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
   	</head>
   	<body>
-  		<div class="center" style="
-    		margin: 30px;">
-  			<h1 style="
-    text-decoration: underline;
-    text-shadow: aqua;
-    text-align: center;
-    text-rendering: geometricPrecision;
-    font-family: fantasy;
-    font-weight: 200;
-    color: rgb(131, 115, 189);
-">WANT TO KNOW ABOUT ANY MOVIE? JUST SEARCH HERE!</h1>
-  		</div>
+        <body background="backgrounds.jpg">
+  		<div class="center" id="main">
+            <h1 id="mainhead">ARTOO, ITS MOVIE TIME</h1>
+  			<h1 id="mainheading">THINK OF ANY MOVIE AND JUST SEARCH HERE!</h1>
 
-		<div class="search-section" id="search" style="
-    		border: black;
-    		border-width: 1.9px;
-    		border-style: solid;">
+		<div class="search-section" id="search">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="page-header" style="
-                    	margin-left:20px;
-                    ">
+                    <div class="page-header" id="pageheader">
                         <label class="control-label" for="t">Title:</label>
                         <input type="text" id="t" name="t" class="input-small">
                          
@@ -65,52 +45,48 @@
         </div>
         <p></p>
         <p></p>
-        <h2 style="  font-size: 30px;
-                    font-family: fantasy;
-                    color: rgb(139, 50, 120);
-                    font-weight: 100;"id="yourres">Example:</h2>
-        <div class="row">
- 			<div class="col-md-2" style="
-    			margin-right: px;">
- 				<div class="center">
-        			<a id="image"> <img height="317" width="214" src="http://ia.media-imdb.com/images/M/MV5BMTk2NTI1MTU4N15BMl5BanBnXkFtZTcwODg0OTY0Nw@@._V1_SY317_CR0,0,214,317_AL_.jpg">
-					</a>
-				</div>
-			</div>
-        	<div class="col-md-10">
-        		<h1 class="header" style="
-    				margin: 10px;
-                    font-size: 36px;
-                    font-family: monospace;
-                    font-weight: 600;
-				"> 
-        			<span class="moviename" id="moviename">The Avengers</span>
-            		<span class="movieyear" id="year">(2012)</span>
-				</h1 style="
-    				margin: 10px;
-				">
-				<p></p>
-				<div class="txt-block" style="
-    				margin: 10px;">
-					<h4>Description:</h4>
-					<p id="description">Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.</p>
-		
-        			<h4 class="inline">Director:</h4>
-					<span class="itemprop" id="dirname">Joss Whedon</span>
-    			
-        			<h4 class="inline" style="
-    					display: block;">Writers:</h4>
-					<span class="itemprop" id="writer1">Joss Whedon,</span> 
-					<span class="itemprop" id="writer2">Zak Penn</span>
+        <div class="whenempty" id="empty">
+            <h2 id="emptytext">Please enter a movie name.</h2>
+        </div>
+        <div class="center"id="error">
+            <h2 id="errortext">Now, that's not a movie pal!</h2>
+                <a id="errorimage"> <img src="errorpage.jpg"></a>
+        </div>
+        <div class="contents" id="content">
+            <h2 id="yourres">Example:</h2>
+            <div class="row">
+ 			    <div class="col-md-3" id="column">
+ 			        <div class="center">
+        			    <a id="image"> <img height="317" width="214" src="http://ia.media-imdb.com/images/M/MV5BMTk2NTI1MTU4N15BMl5BanBnXkFtZTcwODg0OTY0Nw@@._V1_SY317_CR0,0,214,317_AL_.jpg">
+					    </a>
+				    </div>
+			    </div>
+        	   <div class="col-md-9">
+        		  <h1 class="header" id="subheading"> 
+        		  <span class="moviename" id="moviename">The Avengers</span>
+            	   <span class="movieyear" id="year">(2012)</span>
+				    </h1 id="head">
+				    <p></p>
+				    <div class="txt-block" id="text">
+					   <h4>Description:</h4>
+					   <p id="description">Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.</p>
 
-                	<h4 class="inline">Stars:</h4>
-					<span class="itemprop" id="actor1">Robert Downey Jr.</span>, 
-					<span class="itemprop" id="actor2">Chris Evans</span>, 
-					<span class="itemprop" id="actor3">Scarlett Johansson</span>
-                    <p></p>
-                    <button id="readmore-button" type="button" class="btn-xs btn-primary">Read more</button>
-                    <button id="readless-button" type="button" class="btn-xs btn-primary">Read less</button>
-            	</div>
+                       <button id="readmore-button" type="button" class="btn-xs btn-primary" style="display:none;">Read more</button>
+		
+        			   <h4 class="inline">Director:</h4>
+					   <span class="itemprop" id="dirname">Joss Whedon</span>
+    			
+        			   <h4 class="inline" style="
+    					 display: block;">Writers:</h4>
+					   <span class="itemprop" id="writer1">Joss Whedon,Zak Penn</span>
+
+                	   <h4 class="inline">Stars:</h4>
+					   <span class="itemprop" id="actor1">Robert Downey Jr.,Chris Evans,Scarlett Johansson</span>, 
+                       <p></p>
+                       
+                       
+            	    </div>
+                </div>
             </div>
         </div>
 	</body>
